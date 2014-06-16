@@ -1,0 +1,24 @@
+<project name="apkbuild">
+
+<path id="android.antlibs">
+    <pathelement path="C:\Users\unno\android_sdk\adt-bundle-windows-x86_64-20140321\sdk\tools\lib\ant-tasks.jar" />
+</path>
+
+<!-- Custom tasks -->
+<taskdef resource="anttasks.properties" classpathref="android.antlibs" />
+
+<apkbuilder
+        outfolder="bin"
+        resourcefile="MyFirstApp.ap_"
+        apkfilepath="bin\MyFirstApp-debug-unaligned.apk"
+        debugpackaging="true"
+        debugsigning="true"
+        verbose="true"
+        hascode="true"
+        previousBuildType="true/true"
+        buildType="true/true">
+    <dex path="bin/classes.dex"/>
+    <sourcefolder path="src"/>
+</apkbuilder>
+
+</project>
