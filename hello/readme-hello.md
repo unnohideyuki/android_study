@@ -64,13 +64,13 @@ aapt というのは Android Asset Packaging Tool の略だそうだ。
 
 オプションの意味
 
--f : 既存のファイルを上書きする
--m : -J で指定されたディレクトリにパッケージをつくる
--M : AndroidManifest.xml への full path (相対じゃだめなん？）
--S : リソースのあるディレクトリ
--I : base include set に既存のパッケージを追加する
--J : R.java resource constant 定義をどこに出力したらいいのかを指定
--G : proguard options を出力するファイルを指定する
++ -f : 既存のファイルを上書きする
++ -m : -J で指定されたディレクトリにパッケージをつくる
++ -M : AndroidManifest.xml への full path (相対じゃだめなん？）
++ -S : リソースのあるディレクトリ
++ -I : base include set に既存のパッケージを追加する
++ -J : R.java resource constant 定義をどこに出力したらいいのかを指定
++ -G : proguard options を出力するファイルを指定する
 
 よくわからないんだけど、ここでは bin/progurad.txt を作ってる？
 
@@ -91,9 +91,9 @@ src/ には、Java からつくった版の class.dex を disassemble したソースがあるので、
 
 aapt の help によれば、"Do PNG preprocessing on one or several resource folders and store the result in the output folder" だそうだ。
 
--v : verbose 
--S : resource-sources
--C : output-folder
++ -v : verbose 
++ -S : resource-sources
++ -C : output-folder
 
 ## パッケージ
 
@@ -132,7 +132,4 @@ Android resources をパッケージします。-M, -A, -S などで指定されたアセット/リソー
 ## その他
 
 ちらっと、出来上がった apk の中をみたら、へんなところに *.s が転がってる気がした。なんか変かも。
-
-
-
-    
+  
