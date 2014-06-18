@@ -1,0 +1,7 @@
+#!/bin/sh
+
+t=`which adb`
+SDK_BASE=`dirname $t`
+
+cd ${SDK_BASE}/../tools
+cmd.exe //c android avd & # why //c instead of /c ?
