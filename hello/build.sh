@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -v
 
 #### From Environment Variables ####
 smalijar=$SMALI_JAR
@@ -8,8 +8,8 @@ adb_path=`which adb`
 adb_dir=`dirname $adb_path`
 sdk_base="${adb_dir}/.."
 
-aapt="${sdk_base}/build-tools/android-4.4.2/aapt"
-zipalign="${sdk_base}/tools/zipalign"
+aapt="${sdk_base}/build-tools/21.1.2/aapt"
+zipalign="${sdk_base}/build-tools/21.1.2/zipalign"
 sdklib="${sdk_base}/tools/lib/sdklib.jar"
 
 # build-setup
